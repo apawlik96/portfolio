@@ -1,0 +1,68 @@
+#navbar-menu{
+    border-bottom: 3px solid black;
+}
+
+#navbar-home{
+    border-bottom: 3px solid black;
+}
+
+.home-text{
+    padding-top: 200px;
+    text-align: center;
+}
+
+#home-title{
+    padding-bottom: 50px;
+}
+
+#about-me{
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+#about-me-text{
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+} 
+
+#about{
+    border-bottom: 3px solid black;
+}
+
+#technologies-title{
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-size: 40px;
+}
+
+#potfolio{
+    border-bottom: 1px solid black;
+    padding-bottom: 150px;
+}
+
+#portfolio-h1{
+    font-size: 40px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.chevron-double{
+    text-align: center;
+}
+
+footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #333;
+    text-align: center;
+}
+
+#go-to-the-top{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    text-align: center;
+}

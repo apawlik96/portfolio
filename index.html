@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Anna Pawlik</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top navbar-expand-lg bg-light navbar-light bg-primary p-3" id="navbar-menu">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="#home">Name</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main_nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about"> About </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio"> Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"> Contact </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-image" id="navbar-home" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+            height: 100vh">
+        <div class="home-text">
+            <h1 class="display-3 font-weight-bold white-text" id="home-title">Name</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe autem ullam eos aliquam laborum corrupti
+                quisquam similique itaque, eveniet nesciunt excepturi temporibus quaerat sequi dolorem recusandae aut
+                labore magnam architecto!</p>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h1 class="display-3 font-weight-bold white-text" id="about-me">About Me</h1>
+        <hr class="border-2">
+        <p id="about-me-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis inventore repellendus
+            voluptatum, recusandae corporis, ad molestias et praesentium hic, cum amet consectetur quisquam quod veniam
+            delectus nostrum laboriosam iure dolorum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dolore
+            eos itaque, natus consequuntur a consequatur cupiditate harum beatae quas id explicabo laborum? Delectus
+            architecto harum corporis voluptate sequi minus.</p>
+        <hr class="border-2">
+        <div class="technologies">
+            <div class="container text-center">
+                <h1 class="display-3 font-weight-bold white-text" id="technologies-title">Technologies</h1>
+                <div class="row align-items-start py-5">
+                    <div class="col" id="col-technologies">
+                        JavaScript
+                    </div>
+                    <div class="col" id="col-technologies">
+                        HTML
+                    </div>
+                    <div class="col" id="col-technologies">
+                        CSS
+                    </div>
+                    <div class="col" id="col-technologies">
+                        Git
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h1 class="display-3 font-weight-bold white-text" id="portfolio-h1">Portfolio</h1>
+        <div class="chevron-double">
+            <a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                    class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z" />
+                    <path fill-rule="evenodd"
+                        d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+                </svg></a>
+        </div>
+
+        <div class="chevron-double">
+            <a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                    class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                    <path fill-rule="evenodd"
+                        d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-github"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+            </svg>
+            <i class="bi bi-github"></i>
+        </a>
+    </footer>
+    <div class="scroll" id="go-to-the-top">
+        <a href="#top">Go to the top</a>
+    </div>
+
+    <script type="module" src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
