@@ -4,114 +4,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Anna Pawlik</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style-form.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Bai+Jamjuree:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ff1d17fb07.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <nav class="navbar fixed-top navbar-expand-lg bg-light navbar-light bg-primary p-3" id="navbar-menu">
-        <div class="container-fluid">
-            <a class="navbar-brand " href="#home">Name</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="main_nav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about"> About </a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio"> Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact"> Contact </a></li>
+    <header class="header order-last" id="tm-header">
+        <nav class="navbar">
+            <div class="collapse navbar-collapse single-page-nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-1">
+                            <h1>Anna Pawlik</h1>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link visibility" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#technology">Technology</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a class="nav-link" href="">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <section class="bg-image" id="navbar-home" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
-            height: 100vh">
-        <div class="home-text">
-            <h1 class="display-3 font-weight-bold white-text" id="home-title">Name</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe autem ullam eos aliquam laborum corrupti
-                quisquam similique itaque, eveniet nesciunt excepturi temporibus quaerat sequi dolorem recusandae aut
-                labore magnam architecto!</p>
-        </div>
-    </section>
+    <main>
+        <section id="about">
+            <p> I am a beginner Frontend Developer with a passion for creating aesthetic and functional
+                websites. I have a solid foundation in HTML, CSS, and JavaScript, which I acquired through
+                intensive learning and working on personal projects. I continuously improve my skills by
+                learning new technologies and best practices in web development. I am seeking my first
+                professional job where I can develop my skills and gain practical experience in a team of
+                experienced developers.</p>
+        </section>
 
-    <section class="about" id="about">
-        <h1 class="display-3 font-weight-bold white-text" id="about-me">About Me</h1>
-        <hr class="border-2">
-        <p id="about-me-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis inventore repellendus
-            voluptatum, recusandae corporis, ad molestias et praesentium hic, cum amet consectetur quisquam quod veniam
-            delectus nostrum laboriosam iure dolorum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dolore
-            eos itaque, natus consequuntur a consequatur cupiditate harum beatae quas id explicabo laborum? Delectus
-            architecto harum corporis voluptate sequi minus.</p>
-        <hr class="border-2">
-        <div class="technologies">
-            <div class="container text-center">
-                <h1 class="display-3 font-weight-bold white-text" id="technologies-title">Technologies</h1>
-                <div class="row align-items-start py-5">
-                    <div class="col" id="col-technologies">
-                        JavaScript
+        <section id="experience">
+            <div class="row">
+                <div class="col-3 date-experience">
+                    <h4>2022-present</h4>
+                </div>
+                <div class="col-9 text-experience">
+                    <h2>Mentorship Sessions</h2>
+                    <h5>You Can Dev</h5>
+                    <p><i class="fa-solid fa-arrow-right"></i> Independent creating of websites and applications.
+                    </p>
+                    <p><i class="fa-solid fa-arrow-right"></i> Regular feedback and support in correcting mistakes.
+                    </p>
+                    <p><i class="fa-solid fa-arrow-right"></i> Learning effective problem-solving skills related to
+                        frontend development.
+                    </p>
+                    <p><i class="fa-solid fa-arrow-right"></i> Motivation for continuous development and improvement of
+                        qualifications as a frontend developer.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <h4>2023.06-2024.03</h4>
+                </div>
+                <div class="col-9">
+                    <h2>Young Manager</h2>
+                    <h5>Douglas Sp. z o.o.</h5>
+                    <p><i class="fa-solid fa-arrow-right"></i> Supervising the team, including recruitment,
+                        training, motivation, and performance evaluation.</p>
+                    <p><i class="fa-solid fa-arrow-right"></i> Analyzing sales data, tracking performance
+                        indicators, and taking action to achieve sales targets.</p>
+                    <p><i class="fa-solid fa-arrow-right"></i> Resolving conflicts within the team, identifying
+                        and removing sales obstacles, and making quick decisions in emergency situations.
+                    </p>
+                    <p><i class="fa-solid fa-arrow-right"></i> Assisting in the achievement of company strategic
+                        goals by effectively implementing management guidelines and policies.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="row projects-row">
+                <div class="col-3 date-projects">
+                    <h4>Office Website</h4>
+                </div>
+                <div class="col-9 text-projects">
+                    <div class="card-img">
+                        <a href="" class="image fit thumb" id="officeWebsiteTrigger"><img src="./img/picture.png"
+                                alt="" />
+                            <div class="overlay-text-view">
+                                <div class="text-view">View</div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="col" id="col-technologies">
-                        HTML
+                    <p>Website Project for a Law Firm, Offering Translations in Polish or English and an
+                        Interactive Location Map. The website is responsive, ensuring optimal performance across
+                        all devices.</p>
+                    <div class="git">
+                        <p class="link-git"><a href=""><i class="fab fa-github fa-2x"></i></a></p>
                     </div>
-                    <div class="col" id="col-technologies">
-                        CSS
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JAVASCIPT</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row projects-row">
+                <div class="col-3">
+                    <h4>Form Generator</h4>
+                </div>
+                <div class="col-9">
+                    <div class="card-img">
+                        <a href="" class="image fit thumb" id="formGeneratorTrigger"><img src="./img/picture.png"
+                                alt="" />
+                            <div class="overlay-text-view">
+                                <div class="text-view">View</div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="col" id="col-technologies">
-                        Git
+                    <p>A library enabling the generation of HTML forms based on configuration. It supports both
+                        single and multi-step forms, along with built-in validation. Thanks to the modular
+                        structure of the library, users can easily customize and extend the functionalities of
+                        forms according to their needs.</p>
+                    <div class="git">
+                        <p class="link-git"><a href=""><i class="fab fa-github fa-2x"></i></a></p>
+                    </div>
+                    <ul>
+                        <li>TYPESCRIPT</li>
+                        <li>WEBPACK</li>
+                        <li>JEST</li>
+                        <li>NPM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row projects-row">
+                <div class="col-3">
+                    <h4>Algorithmic Tasks</h4>
+                </div>
+                <div class="col-9">
+                    <div class="card-img">
+                        <a href="" class="image fit thumb"><img src="./img/picture.png"
+                                alt="" />
+                        </a>
+                    </div>
+                    <p>These tasks covered diverse topics such as search algorithms, sorting, and array
+                        manipulation. Each solution was meticulously tested to ensure correctness and code
+                        efficiency.
+                    </p>
+                    <div class="git">
+                        <p class="link-git"><a href=""><i class="fab fa-github fa-2x"></i></a></p>
+                    </div>
+                    <ul>
+                        <li>JAVASCRIPT</li>
+                        <li>JEST</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="button-href">
+                <a href="#" class="button">Full Portfolio<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span class="close-btn" id="closePopup">&times;</span>
+                    <span class="arrow left-arrow" id="prev">&#10094;</span>
+                    <span class="arrow right-arrow" id="next">&#10095;</span>
+                    <div id="popupImageContainer">
+                        <img class="pop-up-img" id="popupImage" src="" alt="Popup Image" />
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section id="technology">
+
+            <div class="row technology-row">
+                <div class="col-3">
+                    <h4>Technology</h4>
+                </div>
+                <div class="col-9">
+                    <ul>
+                        <li>HTML</li>
+                        <li>Bootstrap</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
+                        <li>API</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row technology-row">
+                <div class="col-3">
+                    <h4>Tools</h4>
+                </div>
+                <div class="col-9">
+                    <ul>
+                        <li>Webpack</li>
+                        <li>NPM</li>
+                        <li>Jest</li>
+                        <li>Babel</li>
+                        <li>Git</li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact"></section>
+
+    </main>
+    <section class="fixed-bottom d-none d-sm-block">
+        <div class="container text-center">
+            <button id="changeColors" onclick="changeColors()">
+                <a href="">
+                    <div class="sun">
+                        <i class="fa-solid fa-moon"></i>
+                    </div>
+                    <div class="moon hidden">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                </a>
+            </button>
         </div>
     </section>
-
-    <section class="portfolio" id="portfolio">
-        <h1 class="display-3 font-weight-bold white-text" id="portfolio-h1">Portfolio</h1>
-        <div class="chevron-double">
-            <a href="">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                    class="bi bi-chevron-double-up" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z" />
-                    <path fill-rule="evenodd"
-                        d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
-                </svg></a>
-        </div>
-
-        <div class="chevron-double">
-            <a href="">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                    class="bi bi-chevron-double-down" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                    <path fill-rule="evenodd"
-                        d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                </svg>
-            </a>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <a href="">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-github"
-                viewBox="0 0 16 16">
-                <path
-                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-            </svg>
-            <i class="bi bi-github"></i>
-        </a>
-    </footer>
-    <div class="scroll" id="go-to-the-top">
-        <a href="#top">Go to the top</a>
-    </div>
-
-    <script type="module" src="./index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
-    </script>
+    <div id="cursor"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
