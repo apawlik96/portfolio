@@ -9,10 +9,6 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./style-form.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Bai+Jamjuree:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/ff1d17fb07.js" crossorigin="anonymous"></script>
@@ -21,223 +17,249 @@
 </head>
 
 <body>
-
-    <header class="header order-last" id="tm-header">
-        <nav class="navbar">
-            <div class="collapse navbar-collapse single-page-nav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section-1">
-                            <h1>Anna Pawlik</h1>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link visibility" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#technology">Technology</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a class="nav-link" href="">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section id="about">
-            <p> I am a beginner Frontend Developer with a passion for creating aesthetic and functional
-                websites. I have a solid foundation in HTML, CSS, and JavaScript, which I acquired through
-                intensive learning and working on personal projects. I continuously improve my skills by
-                learning new technologies and best practices in web development. I am seeking my first
-                professional job where I can develop my skills and gain practical experience in a team of
-                experienced developers.</p>
-        </section>
-
-        <section id="experience">
-            <div class="row">
-                <div class="col-3 date-experience">
-                    <h4>2022-present</h4>
-                </div>
-                <div class="col-9 text-experience">
-                    <h2>Mentorship Sessions</h2>
-                    <h5>You Can Dev</h5>
-                    <p><i class="fa-solid fa-arrow-right"></i> Independent creating of websites and applications.
-                    </p>
-                    <p><i class="fa-solid fa-arrow-right"></i> Regular feedback and support in correcting mistakes.
-                    </p>
-                    <p><i class="fa-solid fa-arrow-right"></i> Learning effective problem-solving skills related to
-                        frontend development.
-                    </p>
-                    <p><i class="fa-solid fa-arrow-right"></i> Motivation for continuous development and improvement of
-                        qualifications as a frontend developer.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-3">
-                    <h4>2023.06-2024.03</h4>
-                </div>
-                <div class="col-9">
-                    <h2>Young Manager</h2>
-                    <h5>Douglas Sp. z o.o.</h5>
-                    <p><i class="fa-solid fa-arrow-right"></i> Supervising the team, including recruitment,
-                        training, motivation, and performance evaluation.</p>
-                    <p><i class="fa-solid fa-arrow-right"></i> Analyzing sales data, tracking performance
-                        indicators, and taking action to achieve sales targets.</p>
-                    <p><i class="fa-solid fa-arrow-right"></i> Resolving conflicts within the team, identifying
-                        and removing sales obstacles, and making quick decisions in emergency situations.
-                    </p>
-                    <p><i class="fa-solid fa-arrow-right"></i> Assisting in the achievement of company strategic
-                        goals by effectively implementing management guidelines and policies.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="row projects-row">
-                <div class="col-3 date-projects">
-                    <h4>Office Website</h4>
-                </div>
-                <div class="col-9 text-projects">
-                    <div class="card-img">
-                        <a href="" class="image fit thumb" id="officeWebsiteTrigger"><img src="./img/picture.png"
-                                alt="" />
-                            <div class="overlay-text-view">
-                                <div class="text-view">View</div>
-                            </div>
-                        </a>
-                    </div>
-                    <p>Website Project for a Law Firm, Offering Translations in Polish or English and an
-                        Interactive Location Map. The website is responsive, ensuring optimal performance across
-                        all devices.</p>
-                    <div class="git">
-                        <p class="link-git"><a href=""><i class="fab fa-github fa-2x"></i></a></p>
-                    </div>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JAVASCIPT</li>
+    <div id="outer">
+        <header class="header order-last" id="tm-header">
+            <nav class="navbar">
+                <div class="collapse navbar-collapse single-page-nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section-1">
+                                <h1>Anna Pawlik</h1>
+                            </a>
+                        </li>
+                        <li class="nav-item hidden">
+                            <a class="nav-link visibility" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#technology">Technology</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a class="nav-link" href="">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
-            </div>
-            <div class="row projects-row">
-                <div class="col-3">
-                    <h4>Form Generator</h4>
-                </div>
-                <div class="col-9">
-                    <div class="card-img">
-                        <a href="" class="image fit thumb" id="formGeneratorTrigger"><img src="./img/picture.png"
-                                alt="" />
-                            <div class="overlay-text-view">
-                                <div class="text-view">View</div>
-                            </div>
-                        </a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="about">
+                <p> I am a beginner Frontend Developer with a passion for creating aesthetic and functional
+                    websites. I have a solid foundation in HTML, CSS, and JavaScript, which I acquired through
+                    intensive learning and working on personal projects. I continuously improve my skills by
+                    learning new technologies and best practices in web development. I am seeking my first
+                    professional job where I can develop my skills and gain practical experience in a team of
+                    experienced developers.</p>
+            </section>
+
+            <section id="experience">
+                <div class="row">
+                    <div class="col-3 date-experience">
+                        <h4>2022-present</h4>
                     </div>
-                    <p>A library enabling the generation of HTML forms based on configuration. It supports both
-                        single and multi-step forms, along with built-in validation. Thanks to the modular
-                        structure of the library, users can easily customize and extend the functionalities of
-                        forms according to their needs.</p>
-                    <div class="git">
-                        <p class="link-git"><a href=""><i class="fab fa-github fa-2x"></i></a></p>
-                    </div>
-                    <ul>
-                        <li>TYPESCRIPT</li>
-                        <li>WEBPACK</li>
-                        <li>JEST</li>
-                        <li>NPM</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row projects-row">
-                <div class="col-3">
-                    <h4>Algorithmic Tasks</h4>
-                </div>
-                <div class="col-9">
-                    <div class="card-img">
-                        <a href="" class="image fit thumb"><img src="./img/picture.png"
-                                alt="" />
-                        </a>
-                    </div>
-                    <p>These tasks covered diverse topics such as search algorithms, sorting, and array
-                        manipulation. Each solution was meticulously tested to ensure correctness and code
-                        efficiency.
-                    </p>
-                    <div class="git">
-                        <p class="link-git"><a href=""><i class="fab fa-github fa-2x"></i></a></p>
-                    </div>
-                    <ul>
-                        <li>JAVASCRIPT</li>
-                        <li>JEST</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="button-href">
-                <a href="#" class="button">Full Portfolio<i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div id="popup" class="popup">
-                <div class="popup-content">
-                    <span class="close-btn" id="closePopup">&times;</span>
-                    <span class="arrow left-arrow" id="prev">&#10094;</span>
-                    <span class="arrow right-arrow" id="next">&#10095;</span>
-                    <div id="popupImageContainer">
-                        <img class="pop-up-img" id="popupImage" src="" alt="Popup Image" />
+                    <div class="col-9 text-experience">
+                        <h2>Mentorship Sessions</h2>
+                        <h5>You Can Dev</h5>
+                        <p><i class="fa-solid fa-arrow-right"></i>Independent creating of websites and applications.
+                        </p>
+                        <p><i class="fa-solid fa-arrow-right"></i>Regular feedback and support in correcting mistakes.
+                        </p>
+                        <p><i class="fa-solid fa-arrow-right"></i>Learning effective problem-solving skills related to
+                            frontend development.
+                        </p>
+                        <p><i class="fa-solid fa-arrow-right"></i>Motivation for continuous development and improvement
+                            of qualifications as a frontend developer.</p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="technology">
-
-            <div class="row technology-row">
-                <div class="col-3">
-                    <h4>Technology</h4>
+                <div class="row">
+                    <div class="col-3">
+                        <h4>2023.06-2024.03</h4>
+                    </div>
+                    <div class="col-9">
+                        <h2>Young Manager</h2>
+                        <h5>Douglas Sp. z o.o.</h5>
+                        <p><i class="fa-solid fa-arrow-right"></i>Supervising the team, including recruitment,
+                            training, motivation, and performance evaluation.</p>
+                        <p><i class="fa-solid fa-arrow-right"></i>Analyzing sales data, tracking performance
+                            indicators, and taking action to achieve sales targets.</p>
+                        <p><i class="fa-solid fa-arrow-right"></i>Resolving conflicts within the team, identifying
+                            and removing sales obstacles, and making quick decisions in emergency situations.
+                        </p>
+                        <p><i class="fa-solid fa-arrow-right"></i>Assisting in the achievement of company strategic
+                            goals by effectively implementing management guidelines and policies.</p>
+                    </div>
                 </div>
-                <div class="col-9">
-                    <ul>
-                        <li>HTML</li>
-                        <li>Bootstrap</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>TypeScript</li>
-                        <li>API</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row technology-row">
-                <div class="col-3">
-                    <h4>Tools</h4>
-                </div>
-                <div class="col-9">
-                    <ul>
-                        <li>Webpack</li>
-                        <li>NPM</li>
-                        <li>Jest</li>
-                        <li>Babel</li>
-                        <li>Git</li>
-                    </ul>
+            </section>
 
+            <section id="projects">
+                <div class="row projects-row">
+                    <div class="col-3 date-projects">
+                        <h4>Office Website</h4>
+                    </div>
+                    <div class="col-9 text-projects">
+                        <div class="card-img">
+                            <a href="" class="image fit thumb" id="officeWebsiteTrigger"><img
+                                    src="./img/office-website-1.png" alt="" />
+                                <div class="overlay-text-view">
+                                    <div class="text-view">View</div>
+                                </div>
+                            </a>
+                        </div>
+                        <p>Website Project for a Law Firm, Offering Translations in Polish or English and an
+                            Interactive Location Map. The website is responsive, ensuring optimal performance across
+                            all devices.</p>
+                        <div class="git">
+                            <p class="link-git"><a href=""><i class="fab fa-github fa-2x"></i></a></p>
+                        </div>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JAVASCIPT</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </section>
+                <div class="row projects-row">
+                    <div class="col-3">
+                        <h4>Form Generator</h4>
+                    </div>
+                    <div class="col-9">
+                        <div class="card-img">
+                            <a href="" class="image fit thumb" id="formGeneratorTrigger"><img
+                                    src="./img/form-generator-multi-step.png" alt="" />
+                                <div class="overlay-text-view">
+                                    <div class="text-view">View</div>
+                                </div>
+                            </a>
+                        </div>
+                        <p>A library enabling the generation of HTML forms based on configuration. It supports both
+                            single and multi-step forms, along with built-in validation. Thanks to the modular
+                            structure of the library, users can easily customize and extend the functionalities of
+                            forms according to their needs.</p>
+                        <div class="git">
+                            <p class="link-git"><a href=""><i class="fab fa-github fa-2x"></i></a></p>
+                        </div>
+                        <ul>
+                            <li>TYPESCRIPT</li>
+                            <li>WEBPACK</li>
+                            <li>JEST</li>
+                            <li>NPM</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row projects-row">
+                    <div class="col-3">
+                        <h4>Algorithmic Tasks</h4>
+                    </div>
+                    <div class="col-9">
+                        <div class="card-img">
+                            <a class="image fit thumb"><img src="./img/algorithmic-tasks.png" alt="" />
+                            </a>
+                        </div>
+                        <p>These tasks covered diverse topics such as search algorithms, sorting, and array
+                            manipulation. Each solution was meticulously tested to ensure correctness and code
+                            efficiency.
+                        </p>
+                        <div class="git">
+                            <p class="link-git"><a href=""><i class="fab fa-github fa-2x"></i></a></p>
+                        </div>
+                        <ul>
+                            <li>JAVASCRIPT</li>
+                            <li>JEST</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="button-href">
+                    <a href="#" class="button">Full Portfolio<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
 
-        <section id="contact"></section>
+                <div id="officePopup" class="popup">
+                    <div class="popup-content">
+                        <span class="close-btn" id="closeOfficePopup">&times;</span>
+                        <span class="arrow left-arrow" id="prevOffice">&#10094;</span>
+                        <span class="arrow right-arrow" id="nextOffice">&#10095;</span>
+                        <div id="popupOfficeImageContainer">
+                            <img class="pop-up-img" id="popupOfficeImage" src="" alt="Popup Image" />
+                        </div>
+                    </div>
+                </div>
 
-    </main>
+                <div id="formPopup" class="popup">
+                    <div class="popup-content">
+                        <span class="close-btn" id="closeFormPopup">&times;</span>
+                        <span class="arrow left-arrow" id="prevForm">&#10094;</span>
+                        <span class="arrow right-arrow" id="nextForm">&#10095;</span>
+                        <div id="popupFormImageContainer">
+                            <img class="pop-up-img" id="popupFormImage" src="" alt="Popup Image" />
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="technology">
+
+                <div class="row technology-row">
+                    <div class="col-3">
+                        <h4>Technology</h4>
+                    </div>
+                    <div class="col-9">
+                        <ul>
+                            <li>HTML</li>
+                            <li>Bootstrap</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>
+                            <li>API</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row technology-row">
+                    <div class="col-3">
+                        <h4>Tools</h4>
+                    </div>
+                    <div class="col-9">
+                        <ul>
+                            <li>Webpack</li>
+                            <li>NPM</li>
+                            <li>CSS</li>
+                            <li>Jest</li>
+                            <li>Babel</li>
+                            <li>Git</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div id="form-container"></div>
+            </section>
+
+            <section class="section-link">
+                <li class="links">
+                    <a class="nav-link" href="">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a class="nav-link" href="">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+            </section>
+
+        </main>
+    </div>
     <section class="fixed-bottom d-none d-sm-block">
         <div class="container text-center">
             <button id="changeColors" onclick="changeColors()">

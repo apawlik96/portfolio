@@ -1,128 +1,197 @@
-const cursor = document.getElementById('cursor');
+function initializeCursor() {
+    const cursor = document.getElementById('cursor');
+    let mouseX = 0;
+    let mouseY = 0;
 
-document.addEventListener('scroll', function () {
-    cursor.style.left = mouseX + 'px';
-    cursor.style.top = mouseY + 'px';
-});
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursor.style.left = `${mouseX}px`;
+        cursor.style.top = `${mouseY}px`;
+    });
+}
 
-let mouseX = 0;
-let mouseY = 0;
+function initializePopup(images, triggerId, popupId, prevId, nextId, closeId, imgId) {
+    const trigger = document.getElementById(triggerId);
+    const popup = document.getElementById(popupId);
+    const closePopup = document.getElementById(closeId);
+    const prev = document.getElementById(prevId);
+    const next = document.getElementById(nextId);
+    const popupImage = document.getElementById(imgId);
+    let currentIndex = 0;
 
-document.addEventListener('mousemove', function (e) {
-    mouseX = e.pageX;
-    mouseY = e.pageY;
-
-    cursor.style.left = mouseX + 'px';
-    cursor.style.top = mouseY + 'px';
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    function initializePopup(images, trigger) {
-        const popup = document.getElementById('popup');
-        const closePopup = document.getElementById('closePopup');
-        const prev = document.getElementById('prev');
-        const next = document.getElementById('next');
-        const popupImage = document.getElementById('popupImage');
-
-        let currentIndex = 0;
-
-        function updatePopupImage(index) {
-            popupImage.src = images[index];
-        }
-
-        trigger.addEventListener('click', (e) => {
-            e.preventDefault();
-            popup.style.display = 'block';
-            updatePopupImage(currentIndex);
-        });
-
-        closePopup.addEventListener('click', () => {
-            popup.style.display = 'none';
-        });
-
-        window.addEventListener('click', (e) => {
-            if (e.target === popup) {
-                popup.style.display = 'none';
-            }
-        });
-
-        prev.addEventListener('click', () => {
-            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
-            updatePopupImage(currentIndex);
-        });
-
-        next.addEventListener('click', () => {
-            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
-            updatePopupImage(currentIndex);
-        });
+    const updatePopupImage = index => {
+        popupImage.src = images[index];
     }
 
-    const officeWebsiteTrigger = document.getElementById('officeWebsiteTrigger');
-    initializePopup(["./img/picture2.png", "./img/picture3.png", "./img/picture1.png"], officeWebsiteTrigger);
+    trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        popup.style.display = 'block';
+        updatePopupImage(currentIndex);
+    });
 
-    const formGeneratorTrigger = document.getElementById('formGeneratorTrigger');
-    initializePopup(["./img/picture1.png", "./img/picture2.png", "./img/picture3.png"], formGeneratorTrigger);
-});
+    closePopup.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+
+    prev.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+        updatePopupImage(currentIndex);
+    });
+
+    next.addEventListener('click', () => {
+        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+        updatePopupImage(currentIndex);
+    });
+}
+
+initializePopup(
+    ["./img/office-website-1.png", "./img/office-website-2.png", "./img/office-website-3.png", "./img/office-website-4.png"], 
+    'officeWebsiteTrigger', 
+    'officePopup', 
+    'prevOffice', 
+    'nextOffice', 
+    'closeOfficePopup', 
+    'popupOfficeImage'
+);
+
+initializePopup(
+    ["./img/form-generator-one-step.png", "./img/form-generator-multi-step.png"], 
+    'formGeneratorTrigger', 
+    'formPopup', 
+    'prevForm', 
+    'nextForm', 
+    'closeFormPopup', 
+    'popupFormImage'
+);
 
 function addStylesToActiveLinkOnScroll() {
-    var links = document.querySelectorAll('a');
+    const links = document.querySelectorAll('a');
+    const sunIcon = document.querySelector('.sun');
 
-    function getCurrentSection() {
-        var currentScroll = window.scrollY;
-        var sections = document.querySelectorAll('section');
-        var currentSectionId = '';
+    const getCurrentSection = () => {
+        const currentScroll = window.scrollY;
+        const sections = document.querySelectorAll('section');
+        let currentSectionId = '';
 
-        sections.forEach(function (section) {
-            var sectionTop = section.offsetTop - 50;
-            var sectionBottom = sectionTop + section.offsetHeight;
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 50;
+            const sectionBottom = sectionTop + section.offsetHeight;
 
             if (currentScroll >= sectionTop && currentScroll < sectionBottom) {
-                currentSectionId = '#' + section.getAttribute('id');
+                currentSectionId = `#${section.getAttribute('id')}`;
             }
         });
 
-        var documentHeight = document.documentElement.scrollHeight;
-        var windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        const windowHeight = window.innerHeight;
         if (currentScroll + windowHeight >= documentHeight) {
-            currentSectionId = '#' + sections[sections.length - 1].getAttribute('id');
+            currentSectionId = `#${sections[sections.length - 1].getAttribute('id')}`;
         }
 
         return currentSectionId;
     }
 
-    function setActiveLinkStyle() {
-        var currentSection = getCurrentSection();
+    const setActiveLinkStyle = () => {
+        const currentSection = getCurrentSection();
 
-
-        links.forEach(function (link) {
+        links.forEach(link => {
             link.style.fontSize = '';
             link.style.color = '';
 
             if (link.getAttribute('href') === currentSection) {
-                link.style.color = '#99ccff';
+                if (sunIcon.classList.contains('hidden')) {
+                    link.style.color = '#16395c';
+                } else {
+                    link.style.color = '#99ccff';
+                }
             }
 
-        });
+            const visibilityElement = document.querySelector('.visibility');
+            if (window.innerWidth <= 700 && visibilityElement) {
+                const currentLink = document.querySelector(`a[href="${currentSection}"]`);
+                if (currentLink) {
+                    visibilityElement.textContent = currentLink.textContent;
+                    if (sunIcon.classList.contains('hidden')) {
+                        visibilityElement.style.color = '#16395c';
+                    } else {
+                        visibilityElement.style.color = '#99ccff';
+                    }
+                }
+            }
 
+            const resetVisibilityElement = () => {
+                const visibilityElement = document.querySelector('.visibility');
+                if (window.innerWidth > 700 && visibilityElement) {
+                    visibilityElement.textContent = 'About';
+                    visibilityElement.style.color = '';
+                }
+            }
+            resetVisibilityElement();
+        });
     }
 
     setActiveLinkStyle();
-
     window.addEventListener('scroll', setActiveLinkStyle);
 }
 
-window.onload = addStylesToActiveLinkOnScroll;
+function setupColorChange() {
+    const colors = [
+        ['--light-blue-color', '#16395c'],
+        ['--dark-blue-color', '#16395c'],
+        ['--view-img-color', '#3f7dbb'],
+        ['--bg-color', '#ececec'],
+        ['--bg-color-focus', '#fff'],
+        ['--cursor-bg', 'rgba(113, 121, 129, 0.2)'],
+        ['--color-text', '#16395c'],
+        ['--color-text-focus', '#3f7dbb'],
+        ['--font-weight-200', '400'],
+        ['--font-weight-300', '400'],
+        ['--font-weight-400', '500']
+    ];
+    
+    const changeColors = () => {
+        colors.forEach(([property, value]) => {
+            document.documentElement.style.setProperty(property, value);
+        });
+    }
+    
+    const resetColors = () => {
+        colors.forEach(([property]) => {
+            document.documentElement.style.removeProperty(property);
+        });
+    }
 
-function changeColors() {
-    document.documentElement.style.setProperty('--light-blue-color', '#16395c');
-    document.documentElement.style.setProperty('--dark-blue-color', '#3f7dbb');
-    document.documentElement.style.setProperty('--bg-color', '#b2d6fa');
-    document.documentElement.style.setProperty('--bg-color-focus', '#7298be');
-    document.documentElement.style.setProperty('--color-text', '#858585');
-    document.documentElement.style.setProperty('--color-text-focus', '#000000');
     const sunIcon = document.querySelector('.sun');
     const moonIcon = document.querySelector('.moon');
-    sunIcon.classList.add('hidden');
-    moonIcon.classList.remove('hidden');
 
+    sunIcon.addEventListener('click', (e) => {
+        e.preventDefault();
+        setTimeout(() => {
+            changeColors();
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+        }, 200);
+    });
+
+    moonIcon.addEventListener('click', (e) => {
+        e.preventDefault();
+        setTimeout(() => {
+            resetColors();
+            moonIcon.classList.add('hidden');
+            sunIcon.classList.remove('hidden');
+        }, 200);
+    });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    initializeCursor();
+    addStylesToActiveLinkOnScroll();
+    setupColorChange();
+});
