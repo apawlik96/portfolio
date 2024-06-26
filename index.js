@@ -72,73 +72,70 @@ initializePopup(
 );
 
 function addStylesToActiveLinkOnScroll() {
-    const links = document.querySelectorAll('a');
+    const links = document.querySelectorAll('.navbar-nav a');
     const sunIcon = document.querySelector('.sun');
+    const visibilityElement = document.querySelector('.visibility');
+    let currentVisibleSectionId = '';
 
-    const getCurrentSection = () => {
-        const currentScroll = window.scrollY;
-        const sections = document.querySelectorAll('section');
-        let currentSectionId = '';
+    const setActiveLinkStyle = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const currentSectionId = `#${entry.target.id}`;
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 50;
-            const sectionBottom = sectionTop + section.offsetHeight;
+                currentVisibleSectionId = currentSectionId;
 
-            if (currentScroll >= sectionTop && currentScroll < sectionBottom) {
-                currentSectionId = `#${section.getAttribute('id')}`;
-            }
-        });
+                links.forEach(link => {
+                    link.style.paddingLeft = '';
+                    link.style.color = '';
 
-        const documentHeight = document.documentElement.scrollHeight;
-        const windowHeight = window.innerHeight;
-        if (currentScroll + windowHeight >= documentHeight) {
-            currentSectionId = `#${sections[sections.length - 1].getAttribute('id')}`;
-        }
+                    if (link.getAttribute('href') === currentSectionId) {
+                        link.style.transition = 'all 0.3s ease';
+                        if (window.innerWidth > 991) {
+                            link.style.paddingLeft = '20px';
+                        }
+                        if (sunIcon.classList.contains('hidden')) {
+                            link.style.color = '#16395c';
+                        } else {
+                            link.style.color = '#99ccff';
+                        }
+                    }
+                });
 
-        return currentSectionId;
-    }
-
-    const setActiveLinkStyle = () => {
-        const currentSection = getCurrentSection();
-
-        links.forEach(link => {
-            link.style.fontSize = '';
-            link.style.color = '';
-
-            if (link.getAttribute('href') === currentSection) {
-                if (sunIcon.classList.contains('hidden')) {
-                    link.style.color = '#16395c';
-                } else {
-                    link.style.color = '#99ccff';
-                }
-            }
-
-            const visibilityElement = document.querySelector('.visibility');
-            if (window.innerWidth <= 700 && visibilityElement) {
-                const currentLink = document.querySelector(`a[href="${currentSection}"]`);
-                if (currentLink) {
-                    visibilityElement.textContent = currentLink.textContent;
-                    if (sunIcon.classList.contains('hidden')) {
-                        visibilityElement.style.color = '#16395c';
-                    } else {
-                        visibilityElement.style.color = '#99ccff';
+                if (window.innerWidth <= 700) {
+                    const currentLink = document.querySelector(`.navbar-nav a[href="${currentSectionId}"]`);
+                    if (currentLink) {
+                        visibilityElement.textContent = currentLink.textContent;
+                        if (sunIcon.classList.contains('hidden')) {
+                            visibilityElement.style.color = '#16395c';
+                        } else {
+                            visibilityElement.style.color = '#99ccff';
+                        }
                     }
                 }
             }
-
-            const resetVisibilityElement = () => {
-                const visibilityElement = document.querySelector('.visibility');
-                if (window.innerWidth > 700 && visibilityElement) {
-                    visibilityElement.textContent = 'About';
-                    visibilityElement.style.color = '';
-                }
-            }
-            resetVisibilityElement();
         });
-    }
 
-    setActiveLinkStyle();
-    window.addEventListener('scroll', setActiveLinkStyle);
+        if (window.innerWidth > 700) {
+            visibilityElement.textContent = 'About';
+        }
+    };
+
+    const observer = new IntersectionObserver(setActiveLinkStyle, {
+        root: null,
+        rootMargin: '10px',
+        threshold: 0.2
+    });
+
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    window.addEventListener('resize', () => {
+        setActiveLinkStyle(observer.takeRecords(), observer);
+    });
+
+    setActiveLinkStyle(observer.takeRecords(), observer);
 }
 
 function setupColorChange() {
@@ -153,7 +150,7 @@ function setupColorChange() {
         ['--color-text-focus', '#3f7dbb'],
         ['--font-weight-200', '400'],
         ['--font-weight-300', '400'],
-        ['--font-weight-400', '500']
+        ['--font-weight-400', '500'],
     ];
     
     const changeColors = () => {
