@@ -52,29 +52,28 @@ function initializePopup(images, triggerId, popupId, prevId, nextId, closeId, im
 }
 
 initializePopup(
-    ["./img/office-website-1.png", "./img/office-website-2.png", "./img/office-website-3.png", "./img/office-website-4.png"], 
-    'officeWebsiteTrigger', 
-    'officePopup', 
-    'prevOffice', 
-    'nextOffice', 
-    'closeOfficePopup', 
+    ["./img/office-website-1.png", "./img/office-website-2.png", "./img/office-website-3.png", "./img/office-website-4.png"],
+    'officeWebsiteTrigger',
+    'officePopup',
+    'prevOffice',
+    'nextOffice',
+    'closeOfficePopup',
     'popupOfficeImage'
 );
 
 initializePopup(
-    ["./img/form-generator-one-step.png", "./img/form-generator-multi-step.png"], 
-    'formGeneratorTrigger', 
-    'formPopup', 
-    'prevForm', 
-    'nextForm', 
-    'closeFormPopup', 
+    ["./img/form-generator-one-step.png", "./img/form-generator-multi-step.png"],
+    'formGeneratorTrigger',
+    'formPopup',
+    'prevForm',
+    'nextForm',
+    'closeFormPopup',
     'popupFormImage'
 );
 
 function addStylesToActiveLinkOnScroll() {
     const links = document.querySelectorAll('.navbar-nav a');
     const sunIcon = document.querySelector('.sun');
-    const visibilityElement = document.querySelector('.visibility');
     let currentVisibleSectionId = '';
 
     const setActiveLinkStyle = (entries, observer) => {
@@ -100,30 +99,14 @@ function addStylesToActiveLinkOnScroll() {
                         }
                     }
                 });
-
-                if (window.innerWidth <= 700) {
-                    const currentLink = document.querySelector(`.navbar-nav a[href="${currentSectionId}"]`);
-                    if (currentLink) {
-                        visibilityElement.textContent = currentLink.textContent;
-                        if (sunIcon.classList.contains('hidden')) {
-                            visibilityElement.style.color = '#16395c';
-                        } else {
-                            visibilityElement.style.color = '#99ccff';
-                        }
-                    }
-                }
             }
         });
-
-        if (window.innerWidth > 700) {
-            visibilityElement.textContent = 'About';
-        }
     };
 
     const observer = new IntersectionObserver(setActiveLinkStyle, {
         root: null,
         rootMargin: '10px',
-        threshold: 0.2
+        threshold: 0.3
     });
 
     const sections = document.querySelectorAll('section');
@@ -152,13 +135,13 @@ function setupColorChange() {
         ['--font-weight-300', '400'],
         ['--font-weight-400', '500'],
     ];
-    
+
     const changeColors = () => {
         colors.forEach(([property, value]) => {
             document.documentElement.style.setProperty(property, value);
         });
     }
-    
+
     const resetColors = () => {
         colors.forEach(([property]) => {
             document.documentElement.style.removeProperty(property);
