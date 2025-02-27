@@ -16,7 +16,7 @@
 
 <body>
     <section class="section-menu">
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-lg fixed-top" style="z-index: 0;">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,7 +76,7 @@
             <p> I am an aspiring Frontend Developer with a passion for creating both visually appealing and highly
                 functional
                 websites. My sound knowledge in <strong>HTML</strong>, <strong> CSS</strong>, <strong>
-                    JavaScript</strong> and <strong>TypeScript</strong>, quired through rigorous
+                    JavaScript</strong>, <strong>TypeScript</strong> and <strong>React</strong>, quired through rigorous
                 study and hands-on experience with personal projects, underpins my
                 capabilities. I am committed to the continuous improvement of my skill
                 set by exploring emerging technologies and adhering to the highest best
@@ -174,6 +174,56 @@
         <section id="projects">
             <div class="row projects-row">
                 <div class="col-3 date-projects">
+                    <h4>Personal Finance App</h4>
+                    <h5>In Progress</h5>
+                </div>
+                <div class="col-9 text-projects">
+                    <div class="card-img">
+                        <a href="" class="image fit thumb" id="personalFinanceAppTrigger"><img
+                                src="./img/personal-finance-app-1.png" alt="" />
+                            <div class="overlay-text-view">
+                                <div class="text-view">View</div>
+                            </div>
+                        </a>
+                    </div>
+                    <p>A Personal Finance App that helps users manage their expenses efficiently by tracking transactions and visualizing financial data. It features a responsive design, interactive charts, and a user-friendly interface.</p>
+                    <div class="git">
+                        <p class="link-git"><a href="https://github.com/apawlik96/Personal-finance-apps" target="_blank"><i class="fab fa-github fa-2x"></i></a></p>
+                    </div>
+                    <ul>
+                        <li>React</li>
+                        <li>Redux Toolkit</li>
+                        <li>Yarn</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row projects-row">
+                <div class="col-3 date-projects">
+                    <h4>To-Do List</h4>
+                </div>
+                <div class="col-9 text-projects">
+                    <div class="card-img">
+                        <a href="" class="image fit thumb" id="toDoListTrigger"><img
+                                src="./img/to-do-list-1.png" alt="" />
+                            <div class="overlay-text-view">
+                                <div class="text-view">View</div>
+                            </div>
+                        </a>
+                    </div>
+                    <p>A To-Do List app that allows users to efficiently manage their tasks with features like adding, deleting, and sorting tasks. It also includes a weather API for real-time weather updates and a mood-changing theme.</p>
+                    <div class="git">
+                        <p class="link-git"><a href="https://github.com/apawlik96/to-do-list" target="_blank"><i class="fab fa-github fa-2x"></i></a></p>
+                    </div>
+                    <ul>
+                        <li>React</li>
+                        <li>React Testing Library</li>
+                        <li>Yarn</li>
+                        <li>REST API</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row projects-row">
+                <div class="col-3 date-projects">
                     <h4>Office Website</h4>
                 </div>
                 <div class="col-9 text-projects">
@@ -196,7 +246,7 @@
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>BOOTSTRAP</li>
-                        <li>JAVASCIPT</li>
+                        <li>JAVASCRIPT</li>
                     </ul>
                 </div>
             </div>
@@ -262,6 +312,28 @@
                 </a>
             </div>
 
+            <div id="personalFinanceAppPopup" class="popup">
+                <div class="popup-content">
+                    <span class="close-btn" id="closePersonalFinanceAppPopup">&times;</span>
+                    <span class="arrow left-arrow" id="prevPersonalFinanceApp">&#10094;</span>
+                    <span class="arrow right-arrow" id="nextPersonalFinanceApp">&#10095;</span>
+                    <div id="popupPersonalFinanceAppImageContainer">
+                        <img class="pop-up-img" id="popupPersonalFinanceAppImage" src="" alt="Popup Image" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="toDoListPopup" class="popup">
+                <div class="popup-content">
+                    <span class="close-btn" id="closeToDoListPopup">&times;</span>
+                    <span class="arrow left-arrow" id="prevToDoList">&#10094;</span>
+                    <span class="arrow right-arrow" id="nextToDoList">&#10095;</span>
+                    <div id="popupToDoListImageContainer">
+                        <img class="pop-up-img" id="popupToDoListImage" src="" alt="Popup Image" />
+                    </div>
+                </div>
+            </div>
+
             <div id="officePopup" class="popup">
                 <div class="popup-content">
                     <span class="close-btn" id="closeOfficePopup">&times;</span>
@@ -299,7 +371,9 @@
                         <li>CSS</li>
                         <li>JavaScript</li>
                         <li>TypeScript</li>
-                        <li>API</li>
+                        <li>REST API</li>
+                        <li>React</li>
+                        <li>Redux</li>
                     </ul>
                 </div>
             </div>
@@ -310,10 +384,11 @@
                 <div class="col-9">
                     <ul>
                         <li>Webpack</li>
-                        <li>NPM</li>
+                        <li>NPM/Yarn</li>
                         <li>Jest</li>
                         <li>Babel</li>
                         <li>Git</li>
+                        <li>React Testing Library</li>
                     </ul>
                 </div>
             </div>

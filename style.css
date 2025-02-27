@@ -234,6 +234,9 @@ main {
     .col-3 h4 {
       text-align: left;
     }
+    .col-3 h5 {
+      text-align: left;
+    }
     .col-9 li {
       margin-left: 8px;
       margin-bottom: 4px;
@@ -358,6 +361,7 @@ main {
 
 #experience .row {
   padding: 1rem;
+  margin-top: 2rem;
   border: 1px solid transparent;
   border-radius: 15px;
   transition: all 0.3s ease;
@@ -572,6 +576,15 @@ main {
   text-align: right;
 }
 
+#projects h5 {
+  color: var(--color-text-focus);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: var(--font-weight-600);
+  text-align: right;
+}
+
 #projects h2 {
   color: var(--color-text-focus);
   font-size: 1rem;
@@ -722,6 +735,8 @@ main {
 }
 
 /* Popup container - hidden by default */
+#projects #personalFinanceAppPopup,
+#projects #toDoListPopup,
 #projects #officePopup,
 #projects #formPopup {
   display: none;

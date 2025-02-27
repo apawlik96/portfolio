@@ -52,6 +52,26 @@ function initializePopup(images, triggerId, popupId, prevId, nextId, closeId, im
 }
 
 initializePopup(
+    ["./img/personal-finance-app-1.png", "./img/personal-finance-app-2.png", "./img/personal-finance-app-3.png", "./img/personal-finance-app-4.png"],
+    'personalFinanceAppTrigger',
+    'personalFinanceAppPopup',
+    'prevPersonalFinanceApp',
+    'nextPersonalFinanceApp',
+    'closePersonalFinanceAppPopup',
+    'popupPersonalFinanceAppImage'
+);
+
+initializePopup(
+    ["./img/to-do-list-1.png", "./img/to-do-list-2.png", "./img/to-do-list-3.png"],
+    'toDoListTrigger',
+    'toDoListPopup',
+    'prevToDoList',
+    'nextToDoList',
+    'closeToDoListPopup',
+    'popupToDoListImage'
+);
+
+initializePopup(
     ["./img/office-website-1.png", "./img/office-website-2.png", "./img/office-website-3.png", "./img/office-website-4.png"],
     'officeWebsiteTrigger',
     'officePopup',
