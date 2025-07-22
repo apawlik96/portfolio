@@ -611,6 +611,7 @@ main {
 #projects li {
   display: inline-block;
   margin-left: 6px;
+  margin-bottom: 6px;
   color: var(--color-text);
   font-size: 0.8rem;
   font-weight: var(--font-weight-500);
@@ -633,7 +634,8 @@ main {
   border: 2px solid var(--light-blue-color);
 }
 
-#projects .git {
+#projects .git,
+#projects .netlify {
   display: flex;
   justify-content: center;
 }
@@ -648,6 +650,10 @@ main {
 
 #projects .row:hover i {
   color: var(--light-blue-color);
+}
+
+#projects .row:hover i:hover {
+  color: var(--color-text-focus);
 }
 
 .card-img {
